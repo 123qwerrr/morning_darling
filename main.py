@@ -86,6 +86,9 @@ try:
 except WeChatClientException as e:
   print('微信获取 token 失败，请检查 APP_ID 和 APP_SECRET，或当日调用量是否已达到微信限制。')
   exit(502)
+  
+  wm = WeChatMessage(client)
+
 
 if __name__ == '__main__':
   count = 0
