@@ -87,11 +87,11 @@ except WeChatClientException as e:
   print('微信获取 token 失败，请检查 APP_ID 和 APP_SECRET，或当日调用量是否已达到微信限制。')
   exit(502)
   
- wm = WeChatMessage(client)
- weather = get_weather()
+wm = WeChatMessage(client)
+weather = get_weather()
 if weather is None:
-print('获取天气失败')
-exit(422)
+  print('获取天气失败')
+  exit(422)
 data = {
   "city": {
     "value": city,
@@ -150,7 +150,6 @@ data = {
     "color": get_random_color()
   },
 }
-
 
 if __name__ == '__main__':
   count = 0
