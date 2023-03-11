@@ -40,6 +40,9 @@ def get_weather():
   res = requests.get(url).json()
   if res is None:
     return None
+  weather = res['date']['list'][0]
+  return delta.days
+  
 
 
 # 获取当前日期为星期几
